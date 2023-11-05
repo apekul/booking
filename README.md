@@ -1,7 +1,7 @@
 
 # About
 
-A minimalist app imitating an online store, designed in Figma and built using React and Scss.
+A booking website modeled on booking.com
 
 ## Used
 - React v18.2.0
