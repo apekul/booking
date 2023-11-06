@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { DateRange } from "react-date-range";
 import { addDays } from "date-fns";
 import moment from "moment/moment";
+
 // Icons
 import { MdOutlineTravelExplore } from "react-icons/md";
 import { RiCalendar2Line } from "react-icons/ri";
@@ -30,7 +31,7 @@ const SearchBar = () => {
     },
   ]);
 
-  // Increment/Decrement Person
+  // Increment/Decrement person
   const IncrementPerson = (key) => {
     setPerson((prev) => ({ ...prev, [key]: prev[key] + 1 }));
   };
