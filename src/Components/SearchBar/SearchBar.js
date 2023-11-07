@@ -24,7 +24,7 @@ const SearchBar = () => {
   const [placeList, setPlaceList] = useState([]);
   const [place, setPlace] = useState("");
   const [searchPlace, setSearchPlace] = useState({});
-
+  console.log(searchPlace);
   // Persons
   const [showPerson, setShowPerson] = useState(false);
   const [person, setPerson] = useState({ adults: 1, children: 0, room: 1 });
@@ -90,7 +90,7 @@ const SearchBar = () => {
           <div>
             <input
               placeholder="Where are you going?"
-              className="w-full px-10 py-2 rounded-md"
+              className="w-full px-10 py-2 rounded-md font-bold"
               value={place}
               onChange={(e) => updateInput(e)}
             />
@@ -118,7 +118,7 @@ const SearchBar = () => {
         {/* date range Picker */}
         <li className="relative" ref={dateRef}>
           <div
-            className="w-full px-10 py-2 rounded-md bg-white cursor-pointer"
+            className="w-full px-10 py-2 rounded-md bg-white cursor-pointer font-bold"
             onClick={() => setShowDatePicker(!showDatePicker)}
           >
             {moment(date[0].startDate).format("ddd D MMM ")} -{" "}
@@ -141,7 +141,7 @@ const SearchBar = () => {
         {/* How many persons */}
         <li className="relative select-none" ref={personRef}>
           <div
-            className="w-full px-10 py-2 rounded-md bg-white cursor-pointer flex gap-2"
+            className="w-full px-10 py-2 rounded-md bg-white cursor-pointer flex gap-2 font-bold"
             onClick={() => setShowPerson(!showPerson)}
           >
             <p>

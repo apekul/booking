@@ -12,7 +12,7 @@ import { Footer } from "./Components/Footer";
 function App() {
   return (
     <Router>
-      <div className="min-h-[100vh] flex flex-col">
+      <div className="min-h-[100vh] flex flex-col gap-5">
         <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
