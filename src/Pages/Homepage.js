@@ -1,9 +1,10 @@
 import React from "react";
 import SearchBar from "../Components/SearchBar/SearchBar";
 import Offers from "../Components/Offers";
-import BrowsePropertyByType from "../Components/BrowsePropertyByType";
 import TrendingDestination from "../Components/TrendingDestination";
-import TopRatedHotels from "../Components/TopRatedHotels";
+import ScrollableSection from "../Components/ScrollableSection";
+import { fakeProperty } from "../Assets/fakeObject";
+import { fakeHotels } from "../Assets/fakeObject";
 
 const Homepage = () => {
   return (
@@ -11,9 +12,19 @@ const Homepage = () => {
       <div className="Container flex flex-col gap-10">
         <SearchBar />
         <Offers />
-        <BrowsePropertyByType />
+        <ScrollableSection
+          title="Browse by property type"
+          subtitle=""
+          content={fakeProperty}
+          link={{ direction: "", name: "" }}
+        />
         <TrendingDestination />
-        <TopRatedHotels />
+        <ScrollableSection
+          title="Homes guests love"
+          subtitle=""
+          content={fakeHotels}
+          link={{ direction: "/", name: "Discover homes" }}
+        />
       </div>
     </section>
   );
