@@ -1,22 +1,29 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
 // Pages
 import Homepage from "./Pages/Homepage";
 import { Flights } from "./Pages/Flights";
 
 // Components
-import { Navbar } from "./Components/Navbar";
 import { Footer } from "./Components/Footer";
 
 function App() {
   return (
     <Router>
       <div className="min-h-[100vh] flex flex-col gap-5">
-        <Navbar />
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path="/stays" element={<Homepage />} />
           <Route path="/flights" element={<Flights />} />
+          <Route path="/car-rentals" element={<Flights />} />
+          <Route path="/attractions" element={<Flights />} />
+          <Route path="/airport-taxi" element={<Flights />} />
+          <Route path="/" element={<Navigate replace to="/stays" />} />
         </Routes>
         <Footer />
       </div>

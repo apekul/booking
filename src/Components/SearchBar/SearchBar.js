@@ -79,7 +79,7 @@ const SearchBar = () => {
   }, [dateRef, personRef, placeRef]);
 
   return (
-    <div className="bg-orange-400 p-2 rounded-md flex gap-2">
+    <div className="bg-orange-400 p-2 rounded-md flex gap-2 mt-5">
       {/* Destination */}
       <ul className="w-full text-zinc-600 grid grid-cols-3 gap-2">
         <li

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 // Icons
 import { TbPlaneInflight } from "react-icons/tb";
@@ -8,21 +8,28 @@ import { IoAirplane } from "react-icons/io5";
 import { MdAttractions } from "react-icons/md";
 import { BiSolidTaxi } from "react-icons/bi";
 
-export const Navbar = () => {
-  const [selection, setSelection] = useState("StaysBtn");
+const navLinks = [
+  { name: "stays", icon: <FaBed /> },
+  { name: "flights", icon: <IoAirplane /> },
+  { name: "car-rentals", icon: <FaCarAlt /> },
+  { name: "attractions", icon: <MdAttractions /> },
+  { name: "airport-taxi", icon: <BiSolidTaxi /> },
+];
+
+export const Navbar = ({ title, subtitle }) => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
-    <section id="navbar" className="bg-[#2C2C54] text-white pb-5">
+    <section id="navbar" className="bg-[#2C2C54] text-white ">
       {/* Navbar buttons */}
-      <div className="Container flex flex-col gap-5">
+      <div className="Container flex flex-col">
         <ul className="py-5 flex items-center justify-between">
           <li className="flex items-center gap-2 text-xl cursor-pointer transition-all hover:text-indigo-100">
             <TbPlaneInflight />
             <p>Booking</p>
           </li>
           <li className="flex gap-3 items-center font-bold">
-            <button>List your property</button>
             <button className="bg-white px-2 py-1 rounded-sm text-black transition-all hover:bg-gray-300">
               Register
             </button>
@@ -34,98 +41,28 @@ export const Navbar = () => {
 
         {/* text container */}
         <span>
-          <h1 className="text-5xl font-bold">Plan your travel</h1>
-          <p className="text-3xl text-gray-300">
-            Search for a destination at lower prices
-          </p>
+          <h1 className="text-5xl font-bold">{title}</h1>
+          <p className="text-3xl text-gray-300">{subtitle}</p>
         </span>
 
         {/*  */}
-        <ul className="text-xl py-5 w-fit flex gap-4">
-          <li
-            id="StaysBtn"
-            className={`cursor-pointer px-3 py-1 rounded-full flex items-center gap-2 border-2 border-[#2C2C54] bg-gray-100 transition-all hover:bg-opacity-10
+        <ul className={`text-xl w-fit flex gap-4 ${title ? "py-5" : "pb-5"}`}>
+          {navLinks.map((link, i) => (
+            <li
+              className={`cursor-pointer px-3 py-1 rounded-full flex items-center gap-2 border-2 border-[#2C2C54] bg-gray-100 transition-all hover:bg-opacity-10
             ${
-              selection === "StaysBtn"
+              location.pathname.split("/")[1] === link.name
                 ? "border-white bg-opacity-10"
                 : "bg-opacity-0"
             }`}
-            onClick={(e) => {
-              setSelection(e.currentTarget.id);
-              return navigate("/");
-            }}
-          >
-            <FaBed />
-            <p>Stays</p>
-          </li>
-
-          <li
-            id="FlightsBtn"
-            className={`cursor-pointer px-3 py-1 rounded-full flex items-center gap-2 border-2 border-[#2C2C54] bg-gray-100 transition-all hover:bg-opacity-10
-            ${
-              selection === "FlightsBtn"
-                ? "border-white bg-opacity-10"
-                : "bg-opacity-0"
-            }`}
-            onClick={(e) => {
-              setSelection(e.currentTarget.id);
-              return navigate("/flights");
-            }}
-          >
-            <IoAirplane />
-            <p>Flights</p>
-          </li>
-
-          <li
-            id="CarRentBtn"
-            className={`cursor-pointer px-3 py-1 rounded-full flex items-center gap-2 border-2 border-[#2C2C54] bg-gray-100 transition-all hover:bg-opacity-10
-            ${
-              selection === "CarRentBtn"
-                ? "border-white bg-opacity-10"
-                : "bg-opacity-0"
-            }`}
-            onClick={(e) => {
-              setSelection(e.currentTarget.id);
-              return navigate("/");
-            }}
-          >
-            <FaCarAlt />
-            <p>Car rentals</p>
-          </li>
-
-          <li
-            id="AttractionBtn"
-            className={`cursor-pointer px-3 py-1 rounded-full flex items-center gap-2 border-2 border-[#2C2C54] bg-gray-100 transition-all hover:bg-opacity-10
-            ${
-              selection === "AttractionBtn"
-                ? "border-white bg-opacity-10"
-                : "bg-opacity-0"
-            }`}
-            onClick={(e) => {
-              setSelection(e.currentTarget.id);
-              return navigate("/");
-            }}
-          >
-            <MdAttractions />
-            <p>Attractions</p>
-          </li>
-
-          <li
-            id="TaxiBtn"
-            className={`cursor-pointer px-3 py-1 rounded-full flex items-center gap-2 border-2 border-[#2C2C54] bg-gray-100 transition-all hover:bg-opacity-10
-            ${
-              selection === "TaxiBtn"
-                ? "border-white bg-opacity-10"
-                : "bg-opacity-0"
-            }`}
-            onClick={(e) => {
-              setSelection(e.currentTarget.id);
-              return navigate("/");
-            }}
-          >
-            <BiSolidTaxi />
-            <p>Airport taxis</p>
-          </li>
+              onClick={(e) => {
+                return navigate("/" + link.name);
+              }}
+            >
+              {link.icon}
+              <p>{link.name.replace("-", " ")}</p>
+            </li>
+          ))}
         </ul>
       </div>
     </section>
