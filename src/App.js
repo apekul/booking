@@ -8,7 +8,10 @@ import {
 
 // Pages
 import Homepage from "./Pages/Homepage";
-import { Flights } from "./Pages/Flights";
+import Flights from "./Pages/Flights";
+import CarRental from "./Pages/CarRental";
+import Attractions from "./Pages/Attractions";
+import AirportTaxi from "./Pages/AirportTaxi";
 
 // Components
 import { Footer } from "./Components/Footer";
@@ -20,9 +23,9 @@ function App() {
         <Routes>
           <Route path="/stays" element={<Homepage />} />
           <Route path="/flights" element={<Flights />} />
-          <Route path="/car-rentals" element={<Flights />} />
-          <Route path="/attractions" element={<Flights />} />
-          <Route path="/airport-taxi" element={<Flights />} />
+          <Route path="/car-rentals" element={<CarRental />} />
+          <Route path="/attractions" element={<Attractions />} />
+          <Route path="/airport-taxi" element={<AirportTaxi />} />
           <Route path="/" element={<Navigate replace to="/stays" />} />
         </Routes>
         <Footer />
