@@ -40,15 +40,18 @@ export const Navbar = ({ title, subtitle }) => {
         </ul>
 
         {/* text container */}
-        <span>
-          <h1 className="text-5xl font-bold">{title}</h1>
-          <p className="text-3xl text-gray-300">{subtitle}</p>
-        </span>
+        {title && (
+          <span className="py-10">
+            <h1 className="text-5xl font-bold">{title}</h1>
+            <p className="text-3xl text-gray-300">{subtitle}</p>
+          </span>
+        )}
 
         {/*  */}
         <ul className={`text-xl w-fit flex gap-4 ${title ? "py-5" : "pb-5"}`}>
           {navLinks.map((link, i) => (
             <li
+              key={i}
               className={`cursor-pointer px-3 py-1 rounded-full flex items-center gap-2 border-2 border-[#2C2C54] bg-gray-100 transition-all hover:bg-opacity-10
             ${
               location.pathname.split("/")[1] === link.name

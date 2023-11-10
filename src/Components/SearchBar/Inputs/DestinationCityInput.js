@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import PlaceDropdown from "../PlaceDropdown";
 import { MdOutlineTravelExplore } from "react-icons/md";
 import CityList from "../../../city.list.json";
+import { RxCross2 } from "react-icons/rx";
 
-export const DestinationCityInput = ({
-  searchPlace,
-  setSearchPlace,
-  showPlace,
-}) => {
-  // Destination
+export const DestinationCityInput = ({ searchPlace, setSearchPlace }) => {
+  const placeRef = useRef();
+  const [showPlace, setShowPlace] = useState(false);
+
   const [placeList, setPlaceList] = useState([]);
   const [place, setPlace] = useState("");
 
@@ -31,16 +30,39 @@ export const DestinationCityInput = ({
     return setPlaceList(arr);
   };
 
+  // Close DropDown Menu if cilcked outside of its container
+  useEffect(() => {
+    const handleClick = (event) => {
+      if (placeRef.current && !placeRef.current.contains(event.target)) {
+        setShowPlace(false);
+      }
+    };
+    document.addEventListener("click", handleClick, true);
+    return () => {
+      document.removeEventListener("click", handleClick, true);
+    };
+  }, [placeRef]);
+
   return (
-    <>
+    <li
+      className="relative"
+      ref={placeRef}
+      onClick={() => setShowPlace(!showPlace)}
+    >
       <div>
         <input
           placeholder="Where are you going?"
-          className="w-full px-10 py-2 rounded-md font-bold"
+          className="w-full px-10 py-3 rounded-md"
           value={place}
           onChange={(e) => updateInput(e)}
         />
-        <MdOutlineTravelExplore className="absolute top-2 left-2 text-2xl cursor-pointer" />
+        <MdOutlineTravelExplore className="absolute top-3 left-2 text-2xl cursor-pointer" />
+        {place && (
+          <RxCross2
+            className="absolute top-4 right-2 text-lg cursor-pointer"
+            onClick={() => setPlace("")}
+          />
+        )}
       </div>
       {showPlace &&
         (placeList.length <= 0 ? (
@@ -59,7 +81,7 @@ export const DestinationCityInput = ({
             setSearchPlace={setSearchPlace}
           />
         ))}
-    </>
+    </li>
   );
 };
 

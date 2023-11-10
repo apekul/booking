@@ -11,8 +11,8 @@ const Homepage = () => {
   return (
     <section id="homepage" className="bg-white flex-1">
       <Navbar
-        title="Plan your travel"
-        subtitle="Search for a destination at lower prices"
+        title="Find you next destination"
+        subtitle="Search for the best stay options at a satisfactory price"
       />
       <div className="Container flex flex-col gap-10">
         <SearchBar />

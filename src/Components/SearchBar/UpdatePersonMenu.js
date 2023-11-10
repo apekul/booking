@@ -16,7 +16,7 @@ export const UpdatePersonMenu = ({ person, setPerson, setShowPerson }) => {
   };
 
   return (
-    <ul className="absolute bg-white top-12 shadow-md transition-all w-full flex flex-col items-center">
+    <ul className="absolute bg-white top-14 shadow-md transition-all w-full flex flex-col items-center">
       {Object.keys(person).map((v, i) => (
         <li
           key={i}

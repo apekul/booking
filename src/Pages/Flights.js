@@ -4,7 +4,7 @@ import FlightSearchBar from "../Components/SearchBar/FlightSearchBar";
 
 import ScrollableSection from "../Components/ScrollableSection";
 import { fakeFlights } from "../Assets/fakeObject";
-import { fakeProperty } from "../Assets/fakeObject";
+// import { fakeProperty } from "../Assets/fakeObject";
 
 export const Flights = () => {
   return (
