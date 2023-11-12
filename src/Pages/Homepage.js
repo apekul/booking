@@ -14,7 +14,7 @@ const Homepage = () => {
         title="Find you next destination"
         subtitle="Search for the best stay options at a satisfactory price"
       />
-      <div className="Container flex flex-col gap-10">
+      <div className="Container flex flex-col gap-10 ">
         <SearchBar />
         <Offers />
         <ScrollableSection

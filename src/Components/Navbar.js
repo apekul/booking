@@ -41,14 +41,18 @@ export const Navbar = ({ title, subtitle }) => {
 
         {/* text container */}
         {title && (
-          <span className="py-10">
+          <span className="py-5 lg:py-10">
             <h1 className="text-5xl font-bold">{title}</h1>
             <p className="text-3xl text-gray-300">{subtitle}</p>
           </span>
         )}
 
         {/*  */}
-        <ul className={`text-xl w-fit flex gap-4 ${title ? "py-5" : "pb-5"}`}>
+        <ul
+          className={`text-xl w-fit flex flex-wrap gap-4 ${
+            title ? "py-5" : "pb-5"
+          }`}
+        >
           {navLinks.map((link, i) => (
             <li
               key={i}
@@ -63,7 +67,7 @@ export const Navbar = ({ title, subtitle }) => {
               }}
             >
               {link.icon}
-              <p>{link.name.replace("-", " ")}</p>
+              <p className="hidden lg:block">{link.name.replace("-", " ")}</p>
             </li>
           ))}
         </ul>

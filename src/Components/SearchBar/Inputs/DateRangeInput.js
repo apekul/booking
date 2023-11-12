@@ -6,7 +6,13 @@ import moment from "moment/moment";
 
 export const DateRangeInput = ({ date, setDate }) => {
   const dateRef = useRef();
+  // const [windowSize, setWindowSize] = useState(getWindowSize());
   const [showDatePicker, setShowDatePicker] = useState(false);
+
+  // function getWindowSize() {
+  //   const { innerWidth } = window;
+  //   return innerWidth;
+  // }
 
   // Close DropDown Menu if cilcked outside of its container
   useEffect(() => {
@@ -21,10 +27,22 @@ export const DateRangeInput = ({ date, setDate }) => {
     };
   }, [dateRef]);
 
+  // useEffect(() => {
+  //   function handleWindowResize() {
+  //     setWindowSize(getWindowSize());
+  //   }
+
+  //   window.addEventListener("resize", handleWindowResize);
+
+  //   return () => {
+  //     window.removeEventListener("resize", handleWindowResize);
+  //   };
+  // }, [windowSize]);
+
   return (
     <li className="relative" ref={dateRef}>
       <div
-        className="w-full min-w-[20rem] px-10 py-3 rounded-md bg-white cursor-pointer"
+        className="w-full truncate px-10 py-3 rounded-md bg-white cursor-pointer"
         onClick={() => setShowDatePicker(!showDatePicker)}
       >
         {moment(date[0].startDate).format("ddd D MMM ")} -{" "}
@@ -33,13 +51,14 @@ export const DateRangeInput = ({ date, setDate }) => {
       </div>
       {showDatePicker && (
         <DateRange
-          className="absolute top-14 w-full sm:w-auto shadow-md transition-all"
+          className="absolute top-14 w-full lg:w-auto shadow-md transition-all z-10"
           onChange={(item) => setDate([item.selection])}
           showSelectionPreview={true}
           moveRangeOnFirstSelection={false}
           months={2}
           ranges={date}
           direction="horizontal"
+          // direction={windowSize <= 400 ? "vertical" : "horizontal"}
         />
       )}
     </li>

@@ -43,13 +43,13 @@ const FlightSearchBar = () => {
             name="RoundTrip"
             value="RoundTrip"
           />
-          <label className="cursor-pointer" for="RoundTrip">
+          <label className="cursor-pointer" htmlFor="RoundTrip">
             Round trip
           </label>
         </span>
         <span className="flex items-center gap-1">
           <input type="checkbox" id="OneWay" name="OneWay" value="OneWay" />
-          <label className="cursor-pointer" for="OneWay">
+          <label className="cursor-pointer" htmlFor="OneWay">
             One way
           </label>
         </span>
@@ -60,7 +60,7 @@ const FlightSearchBar = () => {
             name="MultiCity"
             value="MultiCity"
           />
-          <label className="cursor-pointer" for="MultiCity">
+          <label className="cursor-pointer" htmlFor="MultiCity">
             Multi-city
           </label>
         </span>

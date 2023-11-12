@@ -25,12 +25,12 @@ const ScrollableSection = ({ ...children }) => {
 
       <BiChevronLeft
         onClick={() => scroll(-284)}
-        className={`bg-white shadow-md rounded-md cursor-pointer transition-all hover:bg-gray-100 text-3xl absolute top-[10rem] -left-4 select-none
+        className={`bg-white shadow-md rounded-md cursor-pointer transition-all hover:bg-gray-100 text-3xl absolute top-[10rem] hidden md:block -left-4 select-none
     ${offset <= 0 ? "invisible" : "visible"}`}
       />
       <BiChevronRight
         onClick={() => scroll(284)}
-        className={`bg-white shadow-md rounded-md cursor-pointer transition-all hover:bg-gray-100 text-3xl absolute top-[10rem] -right-4 select-none
+        className={`bg-white shadow-md rounded-md cursor-pointer transition-all hover:bg-gray-100 text-3xl absolute top-[10rem] hidden md:block -right-4 select-none
     ${offset >= 1400 ? "invisible" : "visible"}`}
       />
 
@@ -41,7 +41,7 @@ const ScrollableSection = ({ ...children }) => {
         {children.content.map((v, i) => (
           <li
             key={i}
-            className="flex flex-col justify-between bg-white cursor-pointerm min-w-[16.5rem] max-w-[16.5rem] h-full rounded-md shadow-md cursor-pointer border transition-all hover:border-black"
+            className="flex flex-col justify-between bg-white cursor-pointerm min-w-[16.5rem] max-w-[16.5rem] h-[18rem] rounded-md shadow-md cursor-pointer border transition-all hover:border-black"
           >
             <img
               src={v.img}

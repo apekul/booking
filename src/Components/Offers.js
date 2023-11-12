@@ -4,8 +4,8 @@ const Offers = () => {
   return (
     <section className="flex flex-col gap-5">
       <h1 className="font-bold text-2xl">Offers</h1>
-      <ul className="w-full flex gap-5">
-        <li className="flex justify-between w-1/2 bg-white shadow-md">
+      <ul className="w-full flex flex-col lg:flex-row gap-5 text-sm lg:text-base">
+        <li className="flex justify-between  bg-white shadow-md">
           <span className="flex flex-col gap-4 justify-between items-start p-5 w-2/3">
             <span className="flex flex-col gap-1">
               <p className="font-bold">Fly away to your dream holiday</p>
@@ -23,7 +23,7 @@ const Offers = () => {
             className="object-cover object-center w-1/3 h-[12rem]"
           />
         </li>
-        <li className="flex justify-between w-1/2 bg-white shadow-md">
+        <li className="flex justify-between bg-white shadow-md">
           <span className="flex flex-col gap-4 justify-between items-start p-5 w-2/3">
             <span>
               <p className="font-bold">Take your longest holiday yet</p>
@@ -39,7 +39,7 @@ const Offers = () => {
           <img
             src={require(`../Assets/img/offer2.jpg`)}
             alt={"offerImg"}
-            className="object-fill w-1/3 h-[12rem]"
+            className="object-cover w-1/3 h-[12rem]"
           />
         </li>
       </ul>

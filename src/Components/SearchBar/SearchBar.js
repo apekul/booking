@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { addDays } from "date-fns";
+import { useNavigate } from "react-router-dom";
 
 // Components
 import { DateRangeInput } from "./Inputs/DateRangeInput";
@@ -7,6 +8,8 @@ import { DestinationCityInput } from "./Inputs/DestinationCityInput";
 import PplInput from "./Inputs/PplInput";
 
 const SearchBar = () => {
+  const navigate = useNavigate();
+
   // Set Destination
   const [searchPlace, setSearchPlace] = useState({});
 
@@ -23,8 +26,8 @@ const SearchBar = () => {
   ]);
 
   return (
-    <div className="bg-orange-400 p-1 rounded-md flex gap-2 mt-5 z-10">
-      <ul className="w-full text-zinc-600 grid grid-cols-3 gap-2">
+    <div className="bg-orange-400 p-1 rounded-md flex flex-col lg:flex-row gap-2 mt-5 z-10">
+      <ul className="w-full text-zinc-600 grid-cols-3 grid-flow-col gap-2 lg:grid flex flex-col">
         {/* Destination */}
         <DestinationCityInput
           searchPlace={searchPlace}
@@ -38,7 +41,10 @@ const SearchBar = () => {
         <PplInput person={person} setPerson={setPerson} />
       </ul>
 
-      <button className="bg-indigo-500 px-2 py-1 rounded-md font-bold text-xl text-white transition-all hover:bg-indigo-800">
+      <button
+        className="bg-indigo-500 px-2 py-1 rounded-md font-bold text-xl text-white transition-all hover:bg-indigo-800"
+        onClick={() => navigate("/stays/Warsaw")}
+      >
         Search
       </button>
     </div>

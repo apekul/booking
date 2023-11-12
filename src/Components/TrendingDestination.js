@@ -7,7 +7,7 @@ const TrendingDestination = () => {
         <h1 className="font-bold text-2xl">Trending destinations</h1>
         <p>Most popular choices for travellers</p>
       </span>
-      <ul className="w-full grid grid-cols-6 gap-5">
+      <ul className="w-full flex flex-col sm:grid grid-cols-6 gap-5">
         {Array.from({ length: 5 }).map((v, i) => (
           <li
             key={i}

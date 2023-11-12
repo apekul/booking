@@ -14,3 +14,9 @@
   margin: auto;
   padding: 0px 20px 0px 20px;
 }
+
+@media only screen and (max-width: 600px) {
+  .Container {
+    padding: 0px 10px 0px 10px;
+  }
+}
