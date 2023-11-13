@@ -35,46 +35,51 @@ const FlightSearchBar = () => {
         <p>Discover your next dream destination</p>
       </span>
 
-      <div className="flex gap-4">
-        <span className="flex items-center gap-1">
+      <ul className="flex flex-wrap gap-4">
+        <li className="flex items-center gap-1">
           <input
-            type="checkbox"
+            type="radio"
             id="RoundTrip"
-            name="RoundTrip"
+            name="flightType"
             value="RoundTrip"
           />
           <label className="cursor-pointer" htmlFor="RoundTrip">
             Round trip
           </label>
-        </span>
-        <span className="flex items-center gap-1">
-          <input type="checkbox" id="OneWay" name="OneWay" value="OneWay" />
+        </li>
+        <li className="flex items-center gap-1">
+          <input type="radio" id="OneWay" name="flightType" value="OneWay" />
           <label className="cursor-pointer" htmlFor="OneWay">
             One way
           </label>
-        </span>
-        <span className="flex items-center gap-1">
+        </li>
+        <li className="flex items-center gap-1">
           <input
-            type="checkbox"
+            type="radio"
             id="MultiCity"
-            name="MultiCity"
+            name="flightType"
             value="MultiCity"
           />
           <label className="cursor-pointer" htmlFor="MultiCity">
             Multi-city
           </label>
-        </span>
+        </li>
+        <li>
+          <select
+            id="flightClass"
+            name="flightClass"
+            className="cursor-pointer"
+          >
+            <option value="Economy">Economy</option>
+            <option value="Premium economy">Premium economy</option>
+            <option value="Business">Business</option>
+            <option value="First class">First class</option>
+          </select>
+        </li>
+      </ul>
 
-        <select id="flightClass" name="flightClass" className="cursor-pointer">
-          <option value="Economy">Economy</option>
-          <option value="Premium economy">Premium economy</option>
-          <option value="Business">Business</option>
-          <option value="First class">First class</option>
-        </select>
-      </div>
-
-      <div className="bg-orange-400 p-1 rounded-md flex gap-2 z-10">
-        <ul className="w-full text-zinc-600 grid grid-flow-col gap-2">
+      <div className="bg-orange-400 p-1 rounded-md flex flex-col lg:flex-row gap-2 z-10">
+        <ul className="w-full text-zinc-600 flex flex-col lg:grid grid-flow-col gap-2">
           {/* Where from */}
           <FlightFromToInput flight={flight} setFlight={setFlight} />
           <DateRangeInput date={date} setDate={setDate} />

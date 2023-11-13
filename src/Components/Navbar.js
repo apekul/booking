@@ -19,9 +19,8 @@ const navLinks = [
 export const Navbar = ({ title, subtitle }) => {
   const navigate = useNavigate();
   const location = useLocation();
-
   return (
-    <section id="navbar" className="bg-[#2C2C54] text-white">
+    <section id="navbar" className={`bg-[#2C2C54] text-white`}>
       {/* Navbar buttons */}
       <div className="Container flex flex-col">
         <ul className="py-5 flex items-center justify-between">

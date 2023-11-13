@@ -4,6 +4,7 @@ import FlightSearchBar from "../Components/SearchBar/FlightSearchBar";
 
 import ScrollableSection from "../Components/ScrollableSection";
 import { fakeFlights } from "../Assets/fakeObject";
+import ShortestFlight from "../Components/ShortestFlight";
 // import { fakeProperty } from "../Assets/fakeObject";
 
 export const Flights = () => {
@@ -12,6 +13,7 @@ export const Flights = () => {
       <Navbar />
       <div className="Container flex flex-col gap-10">
         <FlightSearchBar />
+        <ShortestFlight />
         <ScrollableSection
           title="Popular flights near you"
           subtitle="Find deals on domestic and international flights"
