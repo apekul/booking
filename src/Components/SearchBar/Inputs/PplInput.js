@@ -22,18 +22,18 @@ export const PplInput = ({ person, setPerson }) => {
   return (
     <li className="relative select-none" ref={personRef}>
       <div
-        className="w-full px-10 py-3 rounded-md bg-white cursor-pointer flex gap-2 "
+        className="w-full px-10 py-4 rounded-md bg-white cursor-pointer flex gap-2 "
         onClick={() => setShowPerson(!showPerson)}
       >
         <p className="truncate">
           {person.adults} adults · {person.children} children · {person.room}{" "}
           room
         </p>
-        <BsFillPersonFill className="absolute top-3 left-2 text-2xl" />
+        <BsFillPersonFill className="absolute top-4 left-2 text-2xl" />
         {showPerson ? (
-          <IoMdArrowDropup className="absolute top-3 right-2 text-2xl" />
+          <IoMdArrowDropup className="absolute top-4 right-2 text-2xl" />
         ) : (
-          <IoMdArrowDropdown className="absolute top-3 right-2 text-2xl" />
+          <IoMdArrowDropdown className="absolute top-4 right-2 text-2xl" />
         )}
       </div>
       {showPerson && (

@@ -52,14 +52,14 @@ export const DestinationCityInput = ({ searchPlace, setSearchPlace }) => {
       <div>
         <input
           placeholder="Where are you going?"
-          className="w-full px-10 py-3 rounded-md"
+          className="w-full px-10 py-4 rounded-md"
           value={place}
           onChange={(e) => updateInput(e)}
         />
-        <MdOutlineTravelExplore className="absolute top-3 left-2 text-2xl cursor-pointer" />
+        <MdOutlineTravelExplore className="absolute top-4 left-2 text-2xl cursor-pointer" />
         {place && (
           <RxCross2
-            className="absolute top-4 right-2 text-lg cursor-pointer"
+            className="absolute top-[1.25rem] right-2 text-lg cursor-pointer"
             onClick={() => setPlace("")}
           />
         )}

@@ -2,7 +2,7 @@ import React from "react";
 
 const Notification = () => {
   return (
-    <div className="bg-[#2C2C54] py-10 text-white">
+    <div className="bg-[#2C2C54] py-10 mt-5 text-white">
       <div className="Container flex flex-col text-center items-center justify-between gap-2">
         <span>
           <p className="font-bold text-2xl">Save time, save money!</p>

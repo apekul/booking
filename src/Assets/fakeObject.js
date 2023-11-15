@@ -153,105 +153,65 @@ export const fakeFlights = [
   },
 ];
 
-export const continent = {
-  europe: {
-    flights: [
-      {
-        from: "Warsaw",
-        to: "Paris",
-        time: "4h 20m",
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/1200px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg",
-      },
-      {
-        from: "Warsaw",
-        to: "Paris",
-        time: "4h 20m",
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/1200px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg",
-      },
-      {
-        from: "Warsaw",
-        to: "Paris",
-        time: "4h 20m",
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/1200px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg",
-      },
-      {
-        from: "Warsaw",
-        to: "Paris",
-        time: "4h 20m",
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/1200px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg",
-      },
-      {
-        from: "Warsaw",
-        to: "Paris",
-        time: "4h 20m",
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/1200px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg",
-      },
-      {
-        from: "Warsaw",
-        to: "Paris",
-        time: "4h 20m",
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/1200px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg",
-      },
-      {
-        from: "Warsaw",
-        to: "Paris",
-        time: "4h 20m",
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/1200px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg",
-      },
-    ],
-  },
-  africa: {
-    flights: [
-      {
-        from: "Warsaw",
-        to: "Hurghard",
-        time: "4h 20m",
-        img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      },
-      {
-        from: "Warsaw",
-        to: "Hurghard",
-        time: "4h 20m",
-        img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      },
-      {
-        from: "Warsaw",
-        to: "Hurghard",
-        time: "4h 20m",
-        img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      },
-      {
-        from: "Warsaw",
-        to: "Hurghard",
-        time: "4h 20m",
-        img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      },
-      {
-        from: "Warsaw",
-        to: "Hurghard",
-        time: "4h 20m",
-        img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      },
-    ],
-  },
-  asia: {
-    flights: [
-      {
-        from: "Warsaw",
-        to: "Dubai",
-        time: "4h 20m",
-        img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      },
-    ],
-  },
-  north_america: {
-    flights: [
-      {
-        from: "Warsaw",
-        to: "New York",
-        time: "4h 20m",
-        img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      },
-    ],
-  },
+// DisplayPopular data
+export const popularFlights = {
+  europe: [
+    {
+      title: "Warsaw to Paris",
+      subtitle: "Shortest flight time: 4h 20m",
+      info: "",
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/1200px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg",
+    },
+  ],
+  africa: [
+    {
+      title: "Warsaw to Hurghard",
+      subtitle: "Shortest flight time: 4h 20m",
+      info: "",
+      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+  ],
+  asia: [
+    {
+      title: "Warsaw to Dubai",
+      subtitle: "Shortest flight time: 4h 20m",
+      info: "",
+      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+  ],
+  north_america: [
+    {
+      title: "Warsaw to New York",
+      subtitle: "Shortest flight time: 4h 20m",
+      info: "",
+      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+  ],
+};
+
+export const popularCarDestination = {
+  cities_in_poland: [
+    {
+      title: "Kraków",
+      subtitle: "13 car hire locations",
+      info: "Average price of 190.83 zł per day",
+      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+  ],
+  cities_in_germany: [
+    {
+      title: "Berlin",
+      subtitle: "5 car hire locations",
+      info: "Average price of 190.83 zł per day",
+      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+  ],
+  cities_worldwide: [
+    {
+      title: "Phoenix",
+      subtitle: "10 car hire locations",
+      info: "Average price of 190.83 zł per day",
+      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+  ],
 };

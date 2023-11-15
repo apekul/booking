@@ -15,20 +15,26 @@ const navLinks = [
   { name: "attractions", icon: <MdAttractions /> },
   { name: "airport-taxi", icon: <BiSolidTaxi /> },
 ];
-
-export const Navbar = ({ title, subtitle }) => {
+export const Navbar = ({ title, subtitle, img }) => {
   const navigate = useNavigate();
   const location = useLocation();
   return (
-    <section id="navbar" className={`bg-[#2C2C54] text-white`}>
+    <section
+      id="navbar"
+      className={`bg-[#2C2C54] text-white bg-cover bg-center`}
+      style={{ backgroundImage: `url(${img})` }}
+    >
       {/* Navbar buttons */}
       <div className="Container flex flex-col">
         <ul className="py-5 flex items-center justify-between">
-          <li className="flex items-center gap-2 text-xl cursor-pointer transition-all hover:text-indigo-100">
+          <li
+            className="flex items-center gap-2 text-xl cursor-pointer transition-all hover:text-indigo-100"
+            onClick={() => navigate("/")}
+          >
             <TbPlaneInflight />
             <p>Booking</p>
           </li>
-          <li className="flex gap-3 items-center font-bold">
+          <li className="flex gap-3 items-center font-bold text-sm">
             <button className="bg-white px-2 py-1 rounded-sm text-black transition-all hover:bg-gray-300">
               Register
             </button>
@@ -55,13 +61,13 @@ export const Navbar = ({ title, subtitle }) => {
           {navLinks.map((link, i) => (
             <li
               key={i}
-              className={`cursor-pointer px-3 py-1 rounded-full flex items-center gap-2 border-2 border-[#2C2C54] bg-gray-100 transition-all hover:bg-opacity-10
+              className={`cursor-pointer px-3 py-1 rounded-full flex items-center gap-2 bg-gray-100 transition-all hover:bg-opacity-10
             ${
               location.pathname.split("/")[1] === link.name
-                ? "border-white bg-opacity-10"
+                ? "border-white bg-opacity-10  border-2 "
                 : "bg-opacity-0"
             }`}
-              onClick={(e) => {
+              onClick={() => {
                 return navigate("/" + link.name);
               }}
             >
