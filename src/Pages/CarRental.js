@@ -6,7 +6,7 @@ import DisplayPopular from "../Components/DisplayPopular";
 import PopularCarBrands from "../Components/PopularCarBrands";
 import Banner from "../Components/Banner";
 
-import { popularFlights, popularCarDestination } from "../Assets/fakeObject";
+import { popularCarDestination } from "../Assets/fakeObject";
 
 // banner icons
 import { FcOnlineSupport } from "react-icons/fc";
@@ -49,12 +49,9 @@ const CarRental = () => {
           data={{
             title: "Popular car hire destinations",
             text: "Explore more options to hire a car for cheap",
-            // content: popularFlights,
             content: popularCarDestination,
           }}
         />
-
-        {/* <ShortestFlight /> */}
       </div>
     </section>
   );
