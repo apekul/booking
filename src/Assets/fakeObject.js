@@ -213,5 +213,91 @@ export const popularCarDestination = {
       info: "Average price of 190.83 zł per day",
       img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    {
+      title: "Phoenix",
+      subtitle: "10 car hire locations",
+      info: "Average price of 190.83 zł per day",
+      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+  ],
+};
+export const destinationsAttraction = {
+  europe: [
+    {
+      title: "Kraków",
+      subtitle: "88 things to do",
+      info: "",
+      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      title: "Kraków",
+      subtitle: "88 things to do",
+      info: "",
+      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      title: "Kraków",
+      subtitle: "88 things to do",
+      info: "",
+      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      title: "Kraków",
+      subtitle: "88 things to do",
+      info: "",
+      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      title: "Kraków",
+      subtitle: "88 things to do",
+      info: "",
+      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      title: "Kraków",
+      subtitle: "88 things to do",
+      info: "",
+      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+  ],
+  north_america: [
+    {
+      title: "Kraków",
+      subtitle: "88 things to do",
+      info: "",
+      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+  ],
+  asia: [
+    {
+      title: "Kraków",
+      subtitle: "88 things to do",
+      info: "",
+      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+  ],
+  africa: [
+    {
+      title: "Kraków",
+      subtitle: "88 things to do",
+      info: "",
+      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+  ],
+  oceania: [
+    {
+      title: "Kraków",
+      subtitle: "88 things to do",
+      info: "",
+      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+  ],
+  middle_east: [
+    {
+      title: "Kraków",
+      subtitle: "88 things to do",
+      info: "",
+      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
   ],
 };

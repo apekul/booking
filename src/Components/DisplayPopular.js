@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IoMdAdd } from "react-icons/io";
 
-export const ShortestFlight = ({ data }) => {
+export const ShortestFlight = ({ data, imgCover }) => {
   const [value, setValue] = useState(Object.keys(data.content)[0]);
 
   const nameUpperCase = (string) =>
@@ -35,15 +35,25 @@ export const ShortestFlight = ({ data }) => {
         ))}
       </ul>
 
-      <ul className="py-5 flex items-center flex-wrap gap-10">
+      <ul className="py-5 w-full flex items-center flex-wrap gap-5">
         {data.content[value].map((v, i) => (
-          <li key={i} className="flex items-center gap-2 cursor-pointer">
+          <li
+            key={i}
+            className="flex w-1/4 items-center gap-2 cursor-pointer relative"
+          >
             <img
               src={v.img}
               alt="flightImage"
-              className="w-16 h-16 object-cover rounded-md"
+              // className="w-16 h-16 object-cover rounded-md"
+              className={`object-cover rounded-md ${
+                imgCover ? "w-full h-auto" : "w-16 h-16"
+              }`}
             />
-            <span className="text-sm">
+            <span
+              className={`text-sm  ${
+                imgCover && "absolute bottom-2 left-2 text-white"
+              }`}
+            >
               <p className="font-bold">{v.title}</p>
               <p className="">{v.subtitle}</p>
               <p className="">{v.info}</p>
