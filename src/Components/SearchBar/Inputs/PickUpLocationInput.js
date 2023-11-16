@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { IoSearch } from "react-icons/io5";
 
 const PickUpLocationInput = ({ pickUpLocation, setPickUpLocation }) => {
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
 
   return (
     <li
