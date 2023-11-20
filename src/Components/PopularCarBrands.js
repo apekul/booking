@@ -1,4 +1,5 @@
 import React from "react";
+import { CarRentalBrands } from "../Assets/fakeObject";
 
 const carBrands = [
   { name: "Panek" },
@@ -15,13 +16,16 @@ const Popularcarbrands = ({ cityName }) => {
         Car rental brand in and around City
       </h1>
       <ul className="flex gap-10 overflow-x-auto">
-        {carBrands.map((brand, i) => (
+        {CarRentalBrands.map((brand, i) => (
           <li key={i} className="text-center">
-            <div className="w-32 h-16 border rounded-md flex items-center justify-center">
-              Logo
+            <div className="w-32 h-16 border bg-top rounded-md flex items-center justify-center">
+              <img
+                src={brand.img}
+                className="object-cover w-full h-full"
+                alt={brand.name + "Logo"}
+              />
             </div>
-
-            {brand.name}
+            <p>{brand.name}</p>
           </li>
         ))}
       </ul>

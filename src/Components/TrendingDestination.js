@@ -8,7 +8,7 @@ const TrendingDestination = () => {
         <p>Most popular choices for travellers</p>
       </span>
       <ul className="w-full flex flex-col sm:grid grid-cols-6 gap-5">
-        {Array.from({ length: 5 }).map((v, i) => (
+        {Array.from({ length: 5 }).map((_, i) => (
           <li
             key={i}
             className={`flex flex-col justify-between w-full bg-white cursor-pointer relative ${

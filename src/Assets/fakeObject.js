@@ -1,3 +1,10 @@
+import Panek from "./img/carRental/panekLogo.jpg";
+import Hertz from "./img/carRental/hertzLogo.png";
+import Carwiz from "./img/carRental/carwizLogo.jpg";
+import Direct from "./img/carRental/directLogo.jpg";
+import Express from "./img/carRental/expressLogo.png";
+import FlexToGo from "./img/carRental/flexToGoLogo.png";
+
 export const fakeProperty = [
   {
     name: "Hotels",
@@ -301,3 +308,12 @@ export const destinationsAttraction = {
     },
   ],
 };
+
+export const CarRentalBrands = [
+  { name: "Panek", img: Panek },
+  { name: "Hertz", img: Hertz },
+  { name: "Direct", img: Direct },
+  { name: "Flex to Go", img: FlexToGo },
+  { name: "Carwiz", img: Carwiz },
+  { name: "Express", img: Express },
+];

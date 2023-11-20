@@ -7,6 +7,8 @@ import { DateRangeInput } from "./Inputs/DateRangeInput";
 import { DestinationCityInput } from "./Inputs/DestinationCityInput";
 import PplInput from "./Inputs/PplInput";
 
+import { MdOutlineTravelExplore } from "react-icons/md";
+
 const SearchBar = () => {
   const navigate = useNavigate();
 
@@ -30,6 +32,7 @@ const SearchBar = () => {
       <ul className="w-full text-zinc-600 grid-cols-3 grid-flow-col gap-2 lg:grid flex flex-col">
         {/* Destination */}
         <DestinationCityInput
+          icon={<MdOutlineTravelExplore />}
           searchPlace={searchPlace}
           setSearchPlace={setSearchPlace}
         />

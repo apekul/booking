@@ -1,10 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import PlaceDropdown from "../PlaceDropdown";
-import { MdOutlineTravelExplore } from "react-icons/md";
 import CityList from "../../../city.list.json";
 import { RxCross2 } from "react-icons/rx";
 
-export const DestinationCityInput = ({ searchPlace, setSearchPlace }) => {
+export const DestinationCityInput = ({ searchPlace, setSearchPlace, icon }) => {
   const placeRef = useRef();
   const [showPlace, setShowPlace] = useState(false);
 
@@ -56,7 +55,10 @@ export const DestinationCityInput = ({ searchPlace, setSearchPlace }) => {
           value={place}
           onChange={(e) => updateInput(e)}
         />
-        <MdOutlineTravelExplore className="absolute top-4 left-2 text-2xl cursor-pointer" />
+        <div className="absolute top-4 left-2 text-2xl cursor-pointer">
+          {icon}
+        </div>
+        {/* <MdOutlineTravelExplore className="absolute top-4 left-2 text-2xl cursor-pointer" /> */}
         {place && (
           <RxCross2
             className="absolute top-[1.25rem] right-2 text-lg cursor-pointer"

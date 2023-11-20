@@ -11,7 +11,6 @@ import Homepage from "./Pages/Homepage";
 import Flights from "./Pages/Flights";
 import CarRental from "./Pages/CarRental";
 import Attractions from "./Pages/Attractions";
-import AirportTaxi from "./Pages/AirportTaxi";
 import City from "./Pages/City";
 import Notification from "./Components/Notification";
 
@@ -27,7 +26,6 @@ function App() {
           <Route path="/flights" element={<Flights />} />
           <Route path="/car-rentals" element={<CarRental />} />
           <Route path="/attractions" element={<Attractions />} />
-          <Route path="/airport-taxi" element={<AirportTaxi />} />
           <Route path="/stays/:city" element={<City />} />
           <Route path="/" element={<Navigate replace to="/stays" />} />
         </Routes>

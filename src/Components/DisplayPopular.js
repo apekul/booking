@@ -11,12 +11,10 @@ export const ShortestFlight = ({ data, imgCover }) => {
       .join(" ");
 
   return (
-    <div className="flex flex-col gap-2">
-      <span className="flex items-center justify-between">
-        <span>
-          <h1 className="font-bold text-2xl">{data.title}</h1>
-          <p>{data.text}</p>
-        </span>
+    <section className="flex flex-col gap-2">
+      <span className="flex flex-col">
+        <h1 className="font-bold text-2xl">{data.title}</h1>
+        <p>{data.text}</p>
       </span>
       <ul className="flex items-center select-none border-b overflow-x-auto">
         {Object.keys(data.content).map((v, i) => (
@@ -35,20 +33,30 @@ export const ShortestFlight = ({ data, imgCover }) => {
         ))}
       </ul>
 
-      <ul className="py-5 w-full flex items-center flex-wrap gap-5">
+      <ul
+        className={`py-5 w-full flex items-center flex-wrap gap-5 ${
+          imgCover
+            ? "grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2"
+            : "flex items-center flex-wrap"
+        }`}
+      >
         {data.content[value].map((v, i) => (
           <li
             key={i}
-            className="flex w-1/4 items-center gap-2 cursor-pointer relative"
+            className={`flex items-center gap-2 cursor-pointer relative ${
+              imgCover && "overflow-hidden rounded-md"
+            } `}
           >
             <img
               src={v.img}
               alt="flightImage"
-              // className="w-16 h-16 object-cover rounded-md"
-              className={`object-cover rounded-md ${
-                imgCover ? "w-full h-auto" : "w-16 h-16"
+              className={`object-cover rounded-md  ${
+                imgCover
+                  ? "w-full h-40 transition-all hover:scale-110"
+                  : "w-16 h-16"
               }`}
             />
+
             <span
               className={`text-sm  ${
                 imgCover && "absolute bottom-2 left-2 text-white"
@@ -65,7 +73,7 @@ export const ShortestFlight = ({ data, imgCover }) => {
         <IoMdAdd />
         <span>More options</span>
       </button>
-    </div>
+    </section>
   );
 };
 

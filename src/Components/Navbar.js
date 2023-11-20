@@ -6,14 +6,12 @@ import { TbPlaneInflight } from "react-icons/tb";
 import { FaBed, FaCarAlt } from "react-icons/fa";
 import { IoAirplane } from "react-icons/io5";
 import { MdAttractions } from "react-icons/md";
-import { BiSolidTaxi } from "react-icons/bi";
 
 const navLinks = [
   { name: "stays", icon: <FaBed /> },
   { name: "flights", icon: <IoAirplane /> },
   { name: "car-rentals", icon: <FaCarAlt /> },
   { name: "attractions", icon: <MdAttractions /> },
-  { name: "airport-taxi", icon: <BiSolidTaxi /> },
 ];
 export const Navbar = ({ title, subtitle, img }) => {
   const navigate = useNavigate();
@@ -21,7 +19,7 @@ export const Navbar = ({ title, subtitle, img }) => {
   return (
     <section
       id="navbar"
-      className={`bg-[#2C2C54] text-white bg-cover bg-center`}
+      className={`bg-[#2C2C54] text-white bg-cover bg-center `}
       style={{ backgroundImage: `url(${img})` }}
     >
       {/* Navbar buttons */}
