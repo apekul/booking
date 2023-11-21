@@ -3,7 +3,12 @@ import PlaceDropdown from "../PlaceDropdown";
 import CityList from "../../../city.list.json";
 import { RxCross2 } from "react-icons/rx";
 
-export const DestinationCityInput = ({ searchPlace, setSearchPlace, icon }) => {
+export const DestinationCityInput = ({
+  searchPlace,
+  setSearchPlace,
+  icon,
+  handleKeyDown,
+}) => {
   const placeRef = useRef();
   const [showPlace, setShowPlace] = useState(false);
 
@@ -54,6 +59,7 @@ export const DestinationCityInput = ({ searchPlace, setSearchPlace, icon }) => {
           className="w-full px-10 py-4 rounded-md"
           value={place}
           onChange={(e) => updateInput(e)}
+          onKeyDown={handleKeyDown}
         />
         <div className="absolute top-4 left-2 text-2xl cursor-pointer">
           {icon}

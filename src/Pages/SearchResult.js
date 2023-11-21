@@ -1,9 +1,13 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { Navbar } from "../Components/Navbar";
 import SearchBar from "../Components/SearchBar/SearchBar";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import ItemList from "../Components/ItemList";
+import ComplexFilter from "../Components/ComplexFilter";
 
-const City = () => {
+const SearchResult = () => {
+  let { item } = useParams();
   return (
     <section id="homepage" className="bg-white flex-1">
       <Navbar />
@@ -30,10 +34,22 @@ const City = () => {
             <p>Search results</p>
           </span>
         </div>
-        City
+
+        <div className="flex gap-3 items-start">
+          <div className="w-1/3 h-full">
+            <ComplexFilter />
+          </div>
+          <div className="flex w-2/3 gap-3 flex-col">
+            <h1 className="text-2xl font-bold">{item}: 150 poperties found</h1>
+            <div className="border border-black py-1 px-2 w-fit rounded-full">
+              Sort by button
+            </div>
+            <ItemList />
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
-export default City;
+export default SearchResult;

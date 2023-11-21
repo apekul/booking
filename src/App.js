@@ -11,7 +11,7 @@ import Homepage from "./Pages/Homepage";
 import Flights from "./Pages/Flights";
 import CarRental from "./Pages/CarRental";
 import Attractions from "./Pages/Attractions";
-import City from "./Pages/City";
+import SearchResult from "./Pages/SearchResult";
 import Notification from "./Components/Notification";
 
 // Components
@@ -26,7 +26,7 @@ function App() {
           <Route path="/flights" element={<Flights />} />
           <Route path="/car-rentals" element={<CarRental />} />
           <Route path="/attractions" element={<Attractions />} />
-          <Route path="/stays/:city" element={<City />} />
+          <Route path="/stays/:item" element={<SearchResult />} />
           <Route path="/" element={<Navigate replace to="/stays" />} />
         </Routes>
 

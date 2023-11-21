@@ -55,7 +55,7 @@ export const DateRangeInput = ({ date, setDate, label }) => {
       </div>
       {showDatePicker && (
         <DateRange
-          className="absolute top-16 w-full lg:w-auto shadow-md transition-all z-10"
+          className="absolute top-16 w-full lg:w-auto shadow-md transition-all z-10 border"
           onChange={(item) => setDate([item.selection])}
           showSelectionPreview={true}
           moveRangeOnFirstSelection={false}
