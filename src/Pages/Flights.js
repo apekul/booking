@@ -52,12 +52,14 @@ export const Flights = () => {
       />
       <div className="Container flex flex-col gap-10">
         <ScrollableSection
+          flight
           title="Popular flights near you"
           subtitle="Find deals on domestic and international flights"
           content={fakeFlights}
           link={{ direction: "", name: "" }}
         />
         <ScrollableSection
+          flight
           title="Trending cities"
           subtitle="Book flights to a destination popular with travellers from Poland"
           content={fakeFlights}

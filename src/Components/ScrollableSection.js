@@ -41,31 +41,36 @@ const ScrollableSection = ({ ...children }) => {
         {children.content.map((v, i) => (
           <li
             key={i}
-            className="flex flex-col justify-between bg-white cursor-pointerm min-w-[16.5rem] max-w-[16.5rem] h-[18rem] rounded-md shadow-md cursor-pointer border transition-all hover:border-black"
+            className="flex flex-col justify-between bg-white cursor-pointerm min-w-[16.5rem] max-w-[16.5rem] h-fit rounded-md shadow-md cursor-pointer border transition-all hover:border-black"
           >
             <img
-              src={v.img}
+              src={v.images[0]}
               alt={"offerImg"}
-              className="object-cover w-full h-full rounded-t-md"
+              className="object-cover w-full h-[11rem] rounded-t-md"
             />
-            <span className="p-2">
-              <p className="font-bold">{v.name}</p>
-              <p className="text-sm">{v.location}</p>
-              <p className="text-sm">
-                {v.date} {v.ppl && ", " + v.ppl}
-              </p>
-              {v.available && (
-                <p className="text-sm">{v.available} available</p>
+            <span className="p-2 h-full">
+              {!children.type && (
+                <>
+                  <p className="font-bold">{v.name}</p>
+                  <p className="text-sm">{v.location}</p>
+                  <span className="flex items-center gap-2 text-sm">
+                    <p className="bg-[#292993] px-1 rounded-md text-white">
+                      {v.rate}
+                    </p>
+                    {v.reviews && <p>{v.reviews} reviews</p>}
+                  </span>
+                  {v.price && (
+                    <p className="text-sm w-full text-end">
+                      Starting from{" "}
+                      <span className="font-bold">${v.price}</span>
+                    </p>
+                  )}
+                </>
               )}
-              <span className="flex items-center gap-2 text-sm">
-                <p className="bg-[#292993] px-1 rounded-md text-white">
-                  {v.rate}
-                </p>
-                {v.reviews && <p>{v.reviews} reviews</p>}
-              </span>
-              {v.price && (
-                <p className="text-sm w-full text-end">
-                  Starting from <span className="font-bold">${v.price}</span>
+              {children.type && <p className="font-bold">{v.type}s</p>}
+              {children.flight && (
+                <p>
+                  {v.date} - {v.flightType}
                 </p>
               )}
             </span>

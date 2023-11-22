@@ -22,6 +22,10 @@ const ComplexFilter = () => {
       hotels: false,
       houses_and_apartments: false,
     },
+    reservation_policy: {
+      free_cancelation: false,
+      book_without_credit_card: false,
+    },
   });
 
   const handleChange = (event, newValue) => setValue(newValue);
@@ -49,13 +53,13 @@ const ComplexFilter = () => {
         />
       </div>
       {Object.keys(filters).map((v, i) => (
-        <div className="p-3 border-b">
+        <div key={i} className="p-3 border-b">
           <p className="font-bold text-sm">
             {v[0].toUpperCase() + v.slice(1).replace(/_/g, " ")}
           </p>
           <div>
             {Object.keys(filters[v]).map((check, index) => (
-              <FormGroup>
+              <FormGroup key={index}>
                 <FormControlLabel
                   control={
                     <Checkbox
@@ -66,7 +70,10 @@ const ComplexFilter = () => {
                     />
                   }
                   label={
-                    check[0].toUpperCase() + check.slice(1).replace(/_/g, " ")
+                    <span className="text-sm">
+                      {check[0].toUpperCase() +
+                        check.slice(1).replace(/_/g, " ")}
+                    </span>
                   }
                 />
               </FormGroup>

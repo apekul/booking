@@ -3,7 +3,7 @@ import SearchBar from "../Components/SearchBar/SearchBar";
 import Offers from "../Components/Offers";
 import TrendingDestination from "../Components/TrendingDestination";
 import ScrollableSection from "../Components/ScrollableSection";
-import { fakeProperty } from "../Assets/fakeObject";
+// import { fakeProperty } from "../Assets/fakeObject";
 import { fakeHotels } from "../Assets/fakeObject";
 import { Navbar } from "../Components/Navbar";
 
@@ -18,9 +18,12 @@ const Homepage = () => {
         <SearchBar />
         <Offers />
         <ScrollableSection
+          type
           title="Browse by property type"
           subtitle=""
-          content={fakeProperty}
+          content={fakeHotels.filter(
+            (v, i) => i === fakeHotels.findIndex((o) => v.type === o.type)
+          )}
           link={{ direction: "", name: "" }}
         />
         <TrendingDestination />
