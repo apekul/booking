@@ -35,7 +35,6 @@ const ComplexFilter = () => {
   return (
     <div className="border rounded-md h-full">
       <p className="border-b p-2 font-bold">Filter by:</p>
-
       <div className="p-3 border-b">
         <p className="font-bold text-sm">Your budget (per night)</p>
         <p>

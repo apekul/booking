@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "../Assets/img/offer1.jpg";
+import { FaStar } from "react-icons/fa";
 
 const ItemList = () => {
   return (
@@ -12,15 +13,26 @@ const ItemList = () => {
         />
         <div className="flex items-start justify-between w-full h-52">
           <div>
-            <span className="flex items-center gap-2">
-              <p className="font-bold text-xl">Property Name</p>
-              <div>stars</div>
+            <span className="flex flex-wrap items-center">
+              <p className="font-bold text-lg text-indigo-500">
+                HARBOR APARTMENTS
+              </p>
+              <div className="flex text-yellow-500 text-sm">
+                {Array.from({ length: 3 }).map((_, i) => (
+                  <FaStar key={i} />
+                ))}
+              </div>
             </span>
             <p className="underline text-indigo-500 text-sm font-bold">
               Katowice
             </p>
+            <div className="border-l-2 px-2 my-2 text-sm">
+              <p className="font-bold">Twin Room</p>
+              <p>2 single beds</p>
+              <p className="text-green-600 font-bold">Breakfast included</p>
+            </div>
           </div>
-          <div className="flex flex-col h-full justify-between ">
+          <div className="flex flex-col h-full w-1/2 items-end justify-between">
             <span className="flex gap-1">
               <span className="text-sm text-end">
                 <p className="font-bold">Very Good</p>

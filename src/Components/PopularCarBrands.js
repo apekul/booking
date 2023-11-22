@@ -1,14 +1,6 @@
 import React from "react";
 import { CarRentalBrands } from "../Assets/fakeObject";
 
-const carBrands = [
-  { name: "Panek" },
-  { name: "Express" },
-  { name: "Rentis" },
-  { name: "Carwiz" },
-  { name: "Greenmotion" },
-];
-
 const Popularcarbrands = ({ cityName }) => {
   return (
     <div className="flex flex-col gap-5 relative">

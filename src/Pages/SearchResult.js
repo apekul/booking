@@ -36,10 +36,10 @@ const SearchResult = () => {
         </div>
 
         <div className="flex gap-3 items-start">
-          <div className="w-1/3 h-full">
+          <div className="w-1/4 h-full">
             <ComplexFilter />
           </div>
-          <div className="flex w-2/3 gap-3 flex-col">
+          <div className="flex w-3/4 gap-3 flex-col">
             <h1 className="text-2xl font-bold">{item}: 150 poperties found</h1>
             <div className="border border-black py-1 px-2 w-fit rounded-full">
               Sort by button

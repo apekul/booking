@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { addDays } from "date-fns";
 import { useNavigate } from "react-router-dom";
 
@@ -14,7 +14,7 @@ const SearchBar = () => {
 
   // Set Destination
   const [searchPlace, setSearchPlace] = useState({});
-  const [error, setError] = useState("");
+  // const [error, setError] = useState("");
 
   // Set how many persons
   const [person, setPerson] = useState({ adults: 1, children: 0, room: 1 });
@@ -30,9 +30,8 @@ const SearchBar = () => {
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
-      return searchPlace.name
-        ? navigate(`/stays/${searchPlace?.name}`)
-        : setError("City not found");
+      return searchPlace.name && navigate(`/stays/${searchPlace?.name}`);
+      // : setError("City not found");
     }
   };
   return (

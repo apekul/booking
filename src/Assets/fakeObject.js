@@ -66,52 +66,19 @@ export const fakeProperty = [
 
 export const fakeHotels = [
   {
-    name: "Hotel name 1",
+    name: "HARBOR APARTMENTS",
     location: "Old Town, Kraków",
     rate: "8.1",
     reviews: 2000,
     img: require(`../Assets/img/offer2.jpg`),
-    priceStartAt: "200",
-  },
-  {
-    name: "Hotel name 1",
-    location: "Old Town, Kraków",
-    rate: "8.1",
-    reviews: 2000,
-    img: require(`../Assets/img/offer2.jpg`),
-    priceStartAt: "200",
-  },
-  {
-    name: "Hotel name 1",
-    location: "Old Town, Kraków",
-    rate: "8.1",
-    reviews: 2000,
-    img: require(`../Assets/img/offer2.jpg`),
-    priceStartAt: "200",
-  },
-  {
-    name: "Hotel name 1",
-    location: "Old Town, Kraków",
-    rate: "8.1",
-    reviews: 2000,
-    img: require(`../Assets/img/offer2.jpg`),
-    priceStartAt: "200",
-  },
-  {
-    name: "Hotel name 1",
-    location: "Old Town, Kraków",
-    rate: "8.1",
-    reviews: 2000,
-    img: require(`../Assets/img/offer2.jpg`),
-    priceStartAt: "200",
-  },
-  {
-    name: "Hotel name 1",
-    location: "Old Town, Kraków",
-    rate: "8.1",
-    reviews: 2000,
-    img: require(`../Assets/img/offer2.jpg`),
-    priceStartAt: "200",
+    price: "200",
+    starts: 3,
+    images: [],
+    type: "Hotel",
+    roomType: "Twin Room",
+    roomInfo:
+      "Kościuszki BENJAMIN'S Apartments is situated in Katowice, 600 metres from Katowice Railway Station, 1.8 km from Spodek, as well as 3 km from Silesia City Center shopping mall. The property is located 1.4 km from University of Silesia, 6.4 km from FairExpo Convention Center and 7.1 km from Stadion Śląski. Free WiFi is available throughout the property and Medical University of Silesia is 700 metres away. At the apartment complex, every unit comes with a wardrobe, a flat-screen TV, a private bathroom, bed linen and towels. There is also a fully equipped kitchen in some of the units equipped with an oven. All units will provide guests with a fridge. Ruch Chorzów Stadium is 7.8 km from the apartment, while Górnik Zabrze is 22 km from the property. The nearest airport is Katowice Airport, 36 km from Kościuszki BENJAMIN'S Apartments. Couples particularly like the location — they rated it 9.2 for a two-person trip.",
+    breakfastIncluded: true,
   },
 ];
 

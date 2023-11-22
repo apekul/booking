@@ -63,10 +63,9 @@ const ScrollableSection = ({ ...children }) => {
                 </p>
                 {v.reviews && <p>{v.reviews} reviews</p>}
               </span>
-              {v.priceStartAt && (
+              {v.price && (
                 <p className="text-sm w-full text-end">
-                  Starting from{" "}
-                  <span className="font-bold">${v.priceStartAt}</span>
+                  Starting from <span className="font-bold">${v.price}</span>
                 </p>
               )}
             </span>
