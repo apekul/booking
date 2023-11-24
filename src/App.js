@@ -13,6 +13,7 @@ import CarRental from "./Pages/CarRental";
 import Attractions from "./Pages/Attractions";
 import SearchResult from "./Pages/SearchResult";
 import Notification from "./Components/Notification";
+import Hotel from "./Pages/Hotel";
 
 // Components
 import { Footer } from "./Components/Footer";
@@ -27,6 +28,7 @@ function App() {
           <Route path="/car-rentals" element={<CarRental />} />
           <Route path="/attractions" element={<Attractions />} />
           <Route path="/stays/:item" element={<SearchResult />} />
+          <Route path="/stays/:item/:name/:id" element={<Hotel />} />
           <Route path="/" element={<Navigate replace to="/stays" />} />
         </Routes>
 

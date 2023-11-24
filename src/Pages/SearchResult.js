@@ -22,11 +22,11 @@ const SearchResult = () => {
       <Navbar />
       <div className="Container flex flex-col gap-10">
         <SearchBar />
-        <div className="flex gap-3 items-start">
-          <div className="w-1/4 h-full">
+        <div className="flex flex-col lg:flex-row gap-3 items-start">
+          <div className="w-full lg:w-1/4 h-full">
             <ComplexFilter />
           </div>
-          <div className="flex w-3/4 gap-3 flex-col">
+          <div className="flex w-full gap-3 flex-col">
             <h1 className="text-2xl font-bold">
               {item}: {fakeHotels.length} poperties found
             </h1>

@@ -25,13 +25,17 @@ const ScrollableSection = ({ ...children }) => {
 
       <BiChevronLeft
         onClick={() => scroll(-284)}
-        className={`bg-white shadow-md rounded-md cursor-pointer transition-all hover:bg-gray-100 text-3xl absolute top-[10rem] hidden md:block -left-4 select-none
-    ${offset <= 0 ? "invisible" : "visible"}`}
+        className={`bg-white shadow-md rounded-md cursor-pointer transition-all hover:bg-gray-100 text-3xl absolute  hidden md:block -left-4 select-none
+        ${offset <= 0 ? "invisible" : "visible"} ${
+          children.topSmall ? "top-[8.5rem]" : "top-[10rem]"
+        }`}
       />
       <BiChevronRight
         onClick={() => scroll(284)}
         className={`bg-white shadow-md rounded-md cursor-pointer transition-all hover:bg-gray-100 text-3xl absolute top-[10rem] hidden md:block -right-4 select-none
-    ${offset >= 1400 ? "invisible" : "visible"}`}
+        ${offset >= 1400 ? "invisible" : "visible"} 
+        ${children.topSmall ? "top-[8.5rem]" : "top-[10rem]"}
+        `}
       />
 
       <ul

@@ -8,19 +8,15 @@ const ComplexFilter = () => {
   const [value, setValue] = useState([100, 200]);
   const [filters, setFilters] = useState({
     rating: 5,
-    fun_things_to_do: {
-      hiking: false,
-      walking_tours: false,
-      bike_tours: false,
-      tennis_court: false,
+    property_type: {
+      hotel: false,
+      apartment: false,
+      resort: false,
+      guest_house: false,
+      hostel: false,
     },
     meals: {
-      self_catering: false,
       breakfast_included: false,
-    },
-    property_type: {
-      hotels: false,
-      houses_and_apartments: false,
     },
     reservation_policy: {
       free_cancelation: false,
@@ -37,9 +33,9 @@ const ComplexFilter = () => {
   };
 
   return (
-    <div className="border rounded-md h-full">
+    <div className="border rounded-md h-full flex lg:flex-col flex-wrap">
       <p className="border-b p-2 font-bold">Filter by:</p>
-      <div className="p-3 border-b">
+      <div className="p-3 border-b w-fit lg:w-full">
         <p className="font-bold text-sm">Your budget (per night)</p>
         <p>
           ${value[0]} - ${value[1]}

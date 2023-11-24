@@ -1,4 +1,5 @@
 import React from "react";
+import { citys } from "../Assets/fakeObject";
 
 const TrendingDestination = () => {
   return (
@@ -8,7 +9,7 @@ const TrendingDestination = () => {
         <p>Most popular choices for travellers</p>
       </span>
       <ul className="w-full flex flex-col sm:grid grid-cols-6 gap-5">
-        {Array.from({ length: 5 }).map((_, i) => (
+        {citys.map((v, i) => (
           <li
             key={i}
             className={`flex flex-col justify-between w-full bg-white cursor-pointer relative ${
@@ -16,12 +17,12 @@ const TrendingDestination = () => {
             }`}
           >
             <img
-              src={require(`../Assets/img/warsawhero.jpg`)}
+              src={v.img}
               alt={"offerImg"}
               className="object-cover object-center w-full h-[20rem]"
             />
             <p className="absolute top-1 left-3 font-bold text-xl text-white">
-              Warszawa
+              {v.name}
             </p>
           </li>
         ))}

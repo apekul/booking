@@ -23,8 +23,8 @@ export const Flights = () => {
         <FlightSearchBar />
         <DisplayPopular
           data={{
-            title: "Popular car hire destinations",
-            text: "Explore more options to hire a car for cheap",
+            title: "Fly worldwide with us",
+            text: "Flights from wherever you are to wherever you want to go",
             content: popularFlights,
           }}
         />
@@ -51,13 +51,6 @@ export const Flights = () => {
         ]}
       />
       <div className="Container flex flex-col gap-10">
-        <ScrollableSection
-          flight
-          title="Popular flights near you"
-          subtitle="Find deals on domestic and international flights"
-          content={fakeFlights}
-          link={{ direction: "", name: "" }}
-        />
         <ScrollableSection
           flight
           title="Trending cities"

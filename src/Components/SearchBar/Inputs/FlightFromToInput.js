@@ -33,7 +33,7 @@ const FlightFromToInput = ({ flight, setFlight }) => {
           )}
           <button
             onClick={() => swapFlight()}
-            className="bg-white ml-2 text-blue-500 py-2 px-1 text-2xl rounded-md"
+            className="bg-white ml-1 text-blue-500 py-2 px-1 text-2xl rounded-md"
           >
             <HiOutlineSwitchHorizontal
               className={`transition-all ${rotate && "rotate-180"}`}

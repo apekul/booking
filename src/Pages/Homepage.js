@@ -19,6 +19,7 @@ const Homepage = () => {
         <Offers />
         <ScrollableSection
           type
+          topSmall
           title="Browse by property type"
           subtitle=""
           content={fakeHotels.filter(

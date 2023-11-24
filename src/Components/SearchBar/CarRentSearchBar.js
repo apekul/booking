@@ -22,8 +22,8 @@ const CarRentSearchBar = () => {
   // const [time, setTime] = useState({});
 
   return (
-    <div className="bg-orange-400 p-1 rounded-md flex flex-col lg:flex-row gap-2 mt-5 z-10">
-      <ul className="w-full text-zinc-600 lg:grid-cols-2 grid-flow-col gap-2 lg:grid flex flex-col">
+    <div className="bg-orange-400 p-1 rounded-md flex flex-col lg:flex-row gap-1 mt-5 z-10">
+      <ul className="w-full text-zinc-600 lg:grid-cols-2 grid-flow-col gap-1 lg:grid flex flex-col">
         <PickUpLocationInput
           pickUpLocation={pickUpLocation}
           setPickUpLocation={setPickUpLocation}
@@ -33,7 +33,7 @@ const CarRentSearchBar = () => {
           setDate={setDate}
           label="Pick-up date - Drop-off date"
         />
-        <li className="flex gap-2">
+        <li className="flex gap-1">
           <TimeInput label="Pick-up time" />
           <TimeInput label="Drop-off time" />
         </li>

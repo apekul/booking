@@ -20,7 +20,7 @@ export const PplInput = ({ person, setPerson }) => {
     };
   }, [personRef]);
   return (
-    <li className="relative select-none" ref={personRef}>
+    <li className="relative select-none z-10" ref={personRef}>
       <div
         className="w-full px-10 py-4 rounded-md bg-white cursor-pointer flex gap-2 "
         onClick={() => setShowPerson(!showPerson)}

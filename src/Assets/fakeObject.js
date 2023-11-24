@@ -38,8 +38,33 @@ import Hotel6Img1 from "./img/hotels/Hotel6/img1.jpg";
 import Hotel6Img2 from "./img/hotels/Hotel6/img2.jpg";
 import Hotel6Img3 from "./img/hotels/Hotel6/img3.jpg";
 
+// hotel icons
+import { FaHouseChimney } from "react-icons/fa6";
+import { FaWifi } from "react-icons/fa6";
+import { MdBathroom } from "react-icons/md";
+import { IoMdEye } from "react-icons/io";
+import { FaShower } from "react-icons/fa6";
+import { GiCookingPot } from "react-icons/gi";
+import { MdOutlineSmokeFree } from "react-icons/md";
+import { LuAirVent } from "react-icons/lu";
+import { PiTelevisionBold } from "react-icons/pi";
+
+// trending destination img
+import Warszawa from "../Assets/img/destination/warszawa.jpg";
+import Krakow from "../Assets/img/destination/krakow.jpg";
+import Sopot from "../Assets/img/destination/sopot.jpg";
+import Wroclaw from "../Assets/img/destination/wroclaw.jpg";
+import Zakopane from "../Assets/img/destination/zakopane.jpg";
+
+// popular flights img
+import milan from "../Assets/img/trendingFlights/milan.jpg";
+import paris from "../Assets/img/trendingFlights/paris.jpg";
+import rome from "../Assets/img/trendingFlights/rome.jpg";
+import valletta from "../Assets/img/trendingFlights/valletta.jpg";
+
 export const fakeHotels = [
   {
+    id: 1,
     name: "HARBOR APARTMENTS",
     location: "Old Town, Kraków",
     rate: "8.1",
@@ -55,6 +80,7 @@ export const fakeHotels = [
     breakfastIncluded: true,
   },
   {
+    id: 2,
     name: "SAVOY Mariacka Apartments",
     location: "Katowice, Poland",
     rate: "7.1",
@@ -70,6 +96,7 @@ export const fakeHotels = [
     breakfastIncluded: false,
   },
   {
+    id: 3,
     name: "APARTAMENTY ATRIUM",
     location: "Warszawa, Poland",
     rate: "5.1",
@@ -86,6 +113,7 @@ export const fakeHotels = [
     breakfastIncluded: false,
   },
   {
+    id: 4,
     name: "Trojak",
     location: "Mysłowice, Katowice",
     rate: "2",
@@ -101,6 +129,7 @@ export const fakeHotels = [
     breakfastIncluded: false,
   },
   {
+    id: 5,
     name: "Pensjonat Sielec",
     location: "Sosnowiec, Poland",
     rate: "6",
@@ -117,6 +146,7 @@ export const fakeHotels = [
     freeCancelation: true,
   },
   {
+    id: 6,
     name: "Orange tree Hotel",
     location: "Bedzin, Poland",
     rate: "5.1",
@@ -131,6 +161,7 @@ export const fakeHotels = [
       "Located in Będzin, 13 km from University of Silesia, Orange Tree Hotel provides accommodation with a shared lounge, free private parking and a terrace. The property is around 13 km from Spodek, 14 km from Katowice Railway Station and 14 km from Silesia City Center shopping mall. The accommodation offers karaoke and room service. Featuring a private bathroom with a shower and a hairdryer, rooms at the hostel also offer free WiFi, while some rooms are equipped with a city view. A Full English/Irish breakfast is available daily at Orange Tree Hotel. The area is popular for hiking and cycling, and bike hire is available at the accommodation. FairExpo Convention Center is 17 km from Orange Tree Hotel, while Medical University of Silesia is 17 km away. The nearest airport is Katowice, 29 km from the hostel, and the property offers a paid airport shuttle service. Couples particularly like the location — they rated it 8.3 for a two-person trip.",
     breakfastIncluded: false,
     freeCancelation: false,
+    bookWithoutCreditCard: true,
   },
 ];
 
@@ -152,7 +183,25 @@ export const popularFlights = {
       title: "Warsaw to Paris",
       subtitle: "Shortest flight time: 4h 20m",
       info: "",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/1200px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg",
+      img: paris,
+    },
+    {
+      title: "Warsaw to Valletta",
+      subtitle: "Shortest flight time: 5h 20m",
+      info: "",
+      img: valletta,
+    },
+    {
+      title: "Warsaw to Milan",
+      subtitle: "Shortest flight time: 5h 20m",
+      info: "",
+      img: milan,
+    },
+    {
+      title: "Warsaw to Rome",
+      subtitle: "Shortest flight time: 5h 20m",
+      info: "",
+      img: rome,
     },
   ],
   africa: [
@@ -221,36 +270,6 @@ export const destinationsAttraction = {
       info: "",
       img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
-    {
-      title: "Kraków",
-      subtitle: "88 things to do",
-      info: "",
-      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      title: "Kraków",
-      subtitle: "88 things to do",
-      info: "",
-      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      title: "Kraków",
-      subtitle: "88 things to do",
-      info: "",
-      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      title: "Kraków",
-      subtitle: "88 things to do",
-      info: "",
-      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      title: "Kraków",
-      subtitle: "88 things to do",
-      info: "",
-      img: "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
   ],
   north_america: [
     {
@@ -301,4 +320,61 @@ export const CarRentalBrands = [
   { name: "Flex to Go", img: FlexToGo },
   { name: "Carwiz", img: Carwiz },
   { name: "Express", img: Express },
+];
+
+export const iconInfo = [
+  { icon: <FaHouseChimney />, name: "Apartments" },
+  { icon: <FaWifi />, name: "Free WiFi" },
+  { icon: <MdBathroom />, name: "Private bathroom" },
+  { icon: <IoMdEye />, name: "View" },
+  { icon: <FaShower />, name: "Shower" },
+  { icon: <GiCookingPot />, name: "Kitchen" },
+  { icon: <MdOutlineSmokeFree />, name: "Non-smoking rooms" },
+  { icon: <LuAirVent />, name: "Air conditioning" },
+  { icon: <PiTelevisionBold />, name: "Tv" },
+];
+
+export const reviews = [
+  {
+    name: "Olga",
+    location: "Ukraine",
+    review:
+      "Clean new accomodation. I stayed one night, everything was great! Good location on central street close to railway station, available reception desk with late check-in",
+  },
+  {
+    name: "Alex",
+    location: "United Kingdom",
+    review:
+      "Clean new accomodation. I stayed one night, everything was great! Good location on central street close to railway station, available reception desk with late check-in",
+  },
+  {
+    name: "Tom",
+    location: "Poland",
+    review:
+      "Clean new accomodation. I stayed one night, everything was great! Good location on central street close to railway station, available reception desk with late check-in",
+  },
+];
+
+// City for trending destinations
+export const citys = [
+  {
+    name: "Warszawa",
+    img: Warszawa,
+  },
+  {
+    name: "Kraków",
+    img: Krakow,
+  },
+  {
+    name: "Wrocław",
+    img: Sopot,
+  },
+  {
+    name: "Sopot",
+    img: Wroclaw,
+  },
+  {
+    name: "Zakopane",
+    img: Zakopane,
+  },
 ];

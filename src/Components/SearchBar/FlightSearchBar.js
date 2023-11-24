@@ -78,8 +78,8 @@ const FlightSearchBar = () => {
         </li>
       </ul>
 
-      <div className="bg-orange-400 p-1 rounded-md flex flex-col lg:flex-row gap-2 z-10">
-        <ul className="w-full text-zinc-600 flex flex-col lg:grid grid-flow-col gap-2">
+      <div className="bg-orange-400 p-1 rounded-md flex flex-col lg:flex-row gap-1 z-10">
+        <ul className="w-full text-zinc-600 flex flex-col lg:grid grid-flow-col gap-1">
           {/* Where from */}
           <FlightFromToInput flight={flight} setFlight={setFlight} />
           <DateRangeInput date={date} setDate={setDate} />

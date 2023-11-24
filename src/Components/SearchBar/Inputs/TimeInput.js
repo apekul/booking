@@ -7,7 +7,7 @@ export const TimeInput = ({ label }) => {
         type="time"
         min="09:00"
         max="18:00"
-        className="h-full py-4 px-2 rounded-md"
+        className="h-full py-3 px-2 rounded-md"
         required
         // onChange={(e) => setTime(e.target.value)}
       />
